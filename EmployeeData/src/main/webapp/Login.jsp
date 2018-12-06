@@ -22,7 +22,9 @@ table, th, td {
 <td>Password  </td>
 <td><input type="password" name="password"/></td>
 </tr>
+
 </table>
+<input type="submit" value="LOGIN"/>
 </form>
 </body>
 </html>

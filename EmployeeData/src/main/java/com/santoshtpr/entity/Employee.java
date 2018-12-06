@@ -1,17 +1,31 @@
 package com.santoshtpr.entity;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Component
-@Scope("prototype")
+@Entity
+@Table(name="EMPLOYEE")
 public class Employee {
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY )
 	private int empId;
+	
+	@Column
 	private String empName;
+	
+	@Column
 	private String location;
+	
+	@Column
 	private String role;
+	
+	@Column
 	private int deptId;
+	
 	public int getEmpId() {
 		return empId;
 	}
